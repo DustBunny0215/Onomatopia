@@ -9,6 +9,10 @@ public class StageDialogueSetter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        Debug.Log("StageDialogueSetter Start: " + gameObject.scene.name);
+        Debug.Log("Massage.Instance = " + Massage.Instance);
+
         if (Massage.Instance != null && dialogueSet != null)
         {
             //UIにセリフデータを渡す

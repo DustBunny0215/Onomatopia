@@ -228,7 +228,9 @@ public class VoskSpeechToText : MonoBehaviour
 
             if (!result.Partial && result.Phrases.Length > 0 && !string.IsNullOrEmpty(result.Phrases[0].Text))
             {
+                string recognizedWord = result.Phrases[0].Text;
                 recognizerStatusText.text = result.Phrases[0].Text;
+                VoiceManager.Instance?.SetRecognizedWord(recognizedWord);
             }
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class StageMove : MonoBehaviour
 {
     [SerializeField] private string stageName;
+    [SerializeField] private StageData stageData;
     private bool isMouseHere=false;
 
     private void OnMouseEnter()
@@ -24,9 +25,10 @@ public class StageMove : MonoBehaviour
     }
     IEnumerator SetStage()
     {
+        stageData.currentStageName = stageName;
+        yield return SceneManager.LoadSceneAsync("VoiceRecogSystem", LoadSceneMode.Additive);
+        yield return SceneManager.LoadSceneAsync("MassageUI", LoadSceneMode.Additive);
         yield return SceneManager.LoadSceneAsync(stageName, LoadSceneMode.Additive);
-        yield return SceneManager.LoadSceneAsync(0,LoadSceneMode.Additive);
         yield return SceneManager.UnloadSceneAsync("ChoiceStage");
-        Debug.Log("Ко");
     }
 }

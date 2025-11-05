@@ -28,10 +28,11 @@ namespace RPG.UI
 
         private void Awake()
         {
+            Debug.Log("Massage Awake: " + gameObject.scene.name);
+
             if (Instance == null)
             {
                 Instance = this;
-                DontDestroyOnLoad(gameObject);
             }
             else
             {
@@ -79,7 +80,6 @@ namespace RPG.UI
 
         public void ChengeText(int num)
         {
-            Debug.Log(num);
             textNom.SetActive(true);
             //diaIm.sprite = datas[num].chaImage;
             if (typingCoroutine != null)

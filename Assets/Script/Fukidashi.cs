@@ -9,7 +9,7 @@ public class Fukidashi : MonoBehaviour
     void Start()
     {
         pos = this.gameObject.GetComponent<Transform>().position;
-        pos = new Vector3(-497, -283, 0);
+        pos = new Vector3(-507.269989f, -247.800003f, 2.55910659f);
     }
 
     // Update is called once per frame

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StageGetCursor : MonoBehaviour
 {
@@ -9,14 +10,37 @@ public class StageGetCursor : MonoBehaviour
     [SerializeField] private float duration = 0.2f; // アニメーション時間（秒）
     private Coroutine scaleCoroutine;
 
-    void Start()
+    [SerializeField] private string stageName;
+    [SerializeField] private GameObject staLevTex;
+
+    [SerializeField] private int stageNumber;
+    [SerializeField] private GameObject lockIcon;
+    public bool isLock=false;
+    private void Start()
     {
+        int unlocked = GameProgressManager.GetUnlockedStage();
         originalScale = transform.localScale;
+
+        if (stageNumber <= unlocked)
+        {
+            isLock = false;
+            if (lockIcon != null) lockIcon.SetActive(false);
+        }
+        else
+        {
+            isLock = true;
+            if (lockIcon != null) lockIcon.SetActive(true);
+        }
     }
 
     void OnMouseEnter()
     {
-        StartScale(originalScale * scaleFactor);
+        if (isLock != true)
+        {
+            StartScale(originalScale * scaleFactor);
+        }
+        
+        staLevTex.GetComponent<Text>().text = stageName;
 
     }
 

@@ -35,6 +35,7 @@ public class IwaMove : MonoBehaviour
 
         if (triggerWords.Contains(word))
         {
+            ClearData.clearedStage = 1;
             StartCoroutine(StartAnimation());
             
         }

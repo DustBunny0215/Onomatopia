@@ -1068,10 +1068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerWords:
-  - "\u304B\u3061\u3063"
-  - "\u304B\u3061"
   - "\u30AB\u30C1\u30C3"
-  - "\u30AB\u30C1"
+  - "\u304B\u3061"
 --- !u!1 &1757818753
 GameObject:
   m_ObjectHideFlags: 0

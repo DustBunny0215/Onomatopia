@@ -10,9 +10,12 @@ public class ClearWhite : MonoBehaviour
     [SerializeField] private float cla;
     [SerializeField] private string stageName;
     [SerializeField] private StageData stageData;
+
+    [SerializeField] private int currentStage;
     // Start is called before the first frame update
     void Start()
     {
+        currentStage = ClearData.clearedStage;
         stageName = stageData.currentStageName;
         sr = GetComponent<SpriteRenderer>();
         StartCoroutine(Display());
@@ -25,6 +28,8 @@ public class ClearWhite : MonoBehaviour
     }
     IEnumerator Display()
     {
+        GameProgressManager.UnlockStage(currentStage + 1);
+
         while (cla < 1f)
         {
             cla += speed;

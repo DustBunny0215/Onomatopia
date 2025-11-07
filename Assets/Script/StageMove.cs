@@ -8,6 +8,8 @@ public class StageMove : MonoBehaviour
     [SerializeField] private StageData stageData;
     private bool isMouseHere=false;
 
+    [SerializeField] private StageGetCursor staGetCur;
+
     private void OnMouseEnter()
     {
         isMouseHere = true;
@@ -18,7 +20,7 @@ public class StageMove : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)&&isMouseHere==true)
+        if (Input.GetMouseButtonDown(0)&&isMouseHere==true&&staGetCur.isLock==false)
         {
             StartCoroutine(SetStage());
         }

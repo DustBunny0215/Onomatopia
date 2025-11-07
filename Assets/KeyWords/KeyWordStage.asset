@@ -19,7 +19,9 @@ MonoBehaviour:
     - "\u3054\u308D\u3054\u308D"
   - sceneName: Stage1.2
     keywords:
-    - "\u30AB\u30C1"
     - "\u30AB\u30C1\u30C3"
     - "\u304B\u3061"
-    - "\u304B\u3061\u3063"
+  - sceneName: Stage1.3
+    keywords:
+    - "\u30DC\u30F3"
+    - "\u30C9\u30AB\u30F3"

@@ -268,6 +268,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleFactor: 1.1
   duration: 0.2
+  stageName: 
+  staLevTex: {fileID: 0}
+  stageNumber: 0
+  lockIcon: {fileID: 0}
+  isLock: 0
 --- !u!114 &532639409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,7 +689,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

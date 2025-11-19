@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 190198602}
   - component: {fileID: 190198603}
   - component: {fileID: 190198604}
+  - component: {fileID: 190198605}
   m_Layer: 0
   m_Name: Stage1Koma_3
   m_TagString: Untagged
@@ -534,6 +535,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3534777, y: 2.1034825}
   m_EdgeRadius: 0
+--- !u!114 &190198605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190198600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8793177561a814198d030bfd34f8f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageName: Stage1.4
+  stageData: {fileID: 11400000, guid: a1e48876b7f1c9a4b910bd776a64c2a2, type: 2}
+  staGetCur: {fileID: 190198603}
 --- !u!1 &465312285
 GameObject:
   m_ObjectHideFlags: 0
